@@ -1,6 +1,6 @@
-# free-google-ai-tools
+# List of Free Google AI Tools
 
-> 10 free Google AI tools nobody talks about — the stack worth $200+/mo that google quietly ships for free.
+> 15 free Google AI tools nobody talks about — the stack worth $300+/mo that google quietly ships for free.
 >
 > no hype. honest writeups including what's free, what isn't, and the catch.
 
@@ -21,25 +21,108 @@ curated by [@exploraX_](https://x.com/exploraX_).
 
 ## the list
 
-| # | tool | what it replaces | catch? |
-|---|------|------------------|--------|
-| 1 | [NotebookLM](#1-notebooklm) | notion AI + perplexity + readwise | daily caps |
-| 2 | [Google AI Studio](#2-google-ai-studio) | openai playground + paid API credits | none |
-| 3 | [Gemini CLI](#3-gemini-cli) | claude code ($20/mo by default) | none |
-| 4 | [Jules](#4-jules) | devin + cursor agent | 15 tasks/day |
-| 5 | [Stitch](#5-stitch) | galileo AI + early-stage figma | regional beta |
-| 6 | [Gemma 4](#6-gemma-4) | paying for hosted LLM inference | runs locally — needs hardware |
-| 7 | [Illuminate](#7-illuminate) | snipd + manual research reading | waitlist in some regions |
-| 8 | [Learn About (LearnLM)](#8-learn-about-learnlm) | paid tutoring | none |
-| 9 | [Google Labs FX](#9-google-labs-fx) | midjourney + suno (partially) | video gen is paid |
-| 10 | [Google Colab](#10-google-colab) | paid cloud GPU rentals | T4 only, session timeouts |
+| # | tool | category | what it replaces | catch? |
+|---|------|----------|------------------|--------|
+| 1 | [Pomelli](#1-pomelli) | AI marketing | jasper + copy.ai + a junior brand marketer | beta — paid tiers coming |
+| 2 | [Stitch](#2-stitch) | AI UI designer | galileo AI + early-stage figma | regional beta |
+| 3 | [Opal](#3-opal) | no-code workflow builder | n8n + zapier | US-first, experimental |
+| 4 | [Antigravity](#4-antigravity) | agentic IDE | cursor ($20/mo) | free requests slashed to ~20/day |
+| 5 | [Mixboard](#5-mixboard) | AI moodboard | canva + pinterest + milanote | US-only + waitlist |
+| 6 | [Disco](#6-disco) | web discovery | manual tab wrangling | macOS-only + waitlist |
+| 7 | [NotebookLM](#7-notebooklm) | research assistant | notion AI + perplexity + readwise | daily caps |
+| 8 | [Learn Your Way](#8-learn-your-way) | AI learning | paid tutoring | waitlist for your own PDFs |
+| 9 | [Flow Music](#9-flow-music) | AI music studio | suno + udio ($10/mo) | age-gated, daily caps |
+| 10 | [Google AI Studio](#10-google-ai-studio) | vibe coder | openai playground + paid API credits | none |
+| 11 | [Jules](#11-jules) | autonomous coding agent | devin + cursor agent | 15 tasks/day |
+| 12 | [Gemini CLI](#12-gemini-cli) | terminal/CLI | claude code ($20/mo by default) | none |
+| 13 | [Code Wiki](#13-code-wiki) | github visualiser | mintlify + devin deepwiki | public repos only |
+| 14 | [Firebase Studio](#14-firebase-studio) | backend mgmt | replit + backend dashboards | ⚠️ sunsetting, signups closed |
+| 15 | [Gemini Code Assist](#15-gemini-code-assist) | coding extension | github copilot ($10/mo) | none |
 
 ---
 
-## 1. NotebookLM
+## 1. Pomelli
+
+**replaces:** jasper + copy.ai + a junior brand marketer
+**url:** [labs.google/pomelli](https://labs.google/pomelli)
+
+point it at your website and it reverse-engineers your "Business DNA" — voice, colors, audience — then generates on-brand social posts, campaigns, and marketing images you can edit and export. built by Google Labs + DeepMind.
+
+**free tier:** completely free in beta. no credit card, no generation limit, no watermark on exports. expanded from a 4-country beta to 170+ countries in march 2026.
+
+**the catch:** still an experimental beta — Google has signaled paid tiers are coming once it exits beta. 18+, Google account required. and it's only as good as your website: thin site in, generic brand out.
+
+---
+
+## 2. Stitch
+
+**replaces:** galileo AI + early-stage figma work
+**url:** [stitch.withgoogle.com](https://stitch.withgoogle.com)
+
+google's free figma killer. describe an interface, get production-ready HTML/CSS/Tailwind + figma export. the 2026 update added voice canvas, infinite canvas, and MCP integration with cursor.
+
+**free tier:** 350 standard + 200 experimental generations per month.
+
+**the catch:** still in Google Labs beta. unavailable in some countries. output quality is solid but generic — it generates from its own models, not your team's design system.
+
+---
+
+## 3. Opal
+
+**replaces:** n8n + zapier (for AI mini-apps)
+**url:** [opal.withgoogle.com](https://opal.withgoogle.com)
+
+build no-code AI mini-apps and multi-step workflows by describing them in plain language. chain prompts, models, and an agent step into a visual pipeline, then share it on a Google-hosted link. basically a free n8n with Gemini baked in.
+
+**free tier:** free with no published usage caps. app creation, the visual editor, the agent step, Gemini access, and hosted sharing are all included on a standard Google account.
+
+**the catch:** rolled out US-first and still expanding. as a Labs experiment it can be reprioritized or shut down, and heavy workflows can still bump into underlying Gemini quotas even though Opal itself doesn't charge.
+
+---
+
+## 4. Antigravity
+
+**replaces:** cursor ($20/mo) + windsurf
+**url:** [antigravity.google](https://antigravity.google)
+
+google's agentic IDE — the self-styled "cursor-killer." describe a feature and agents plan, edit across files, run tests, and build full apps from text prompts. free-tier users get Gemini 3 Pro, Claude Sonnet 4.5, and GPT-OSS models inside the editor.
+
+**free tier:** $0, no card. unlimited tab completions and editor basics, plus a daily allowance of agent requests.
+
+**the catch:** the agent allowance is the pressure point. the free daily request cap was cut hard after launch (from ~250 to ~20/day by late 2025) and Google has signaled the free offering may keep shifting. great to try, risky to build a daily workflow around until the limits settle.
+
+---
+
+## 5. Mixboard
+
+**replaces:** canva + pinterest + milanote (moodboards)
+**url:** [labs.google/mixboard](https://labs.google/mixboard)
+
+a mix of canva and pinterest where you generate and combine AI images into moodboards. start from a text prompt or a pre-filled board, drop in your own images, and edit right on the canvas with natural language, powered by the Nano Banana image model.
+
+**free tier:** free while in beta.
+
+**the catch:** US-only during beta with a Google Labs waitlist for wider access. the high-end models (Nano Banana Pro / Gemini 3) have daily usage limits, and premium pricing hasn't been announced yet.
+
+---
+
+## 6. Disco
+
+**replaces:** manual tab wrangling + custom dashboards
+**url:** [labs.google/disco](https://labs.google/disco)
+
+turns your open browser tabs into interactive AI apps ("GenTabs") built with Gemini 3. competitor tabs become a comparison matrix, travel tabs become an itinerary, recipe blogs become a meal planner with a shopping list — no code, just describe what you want.
+
+**free tier:** free Google Labs experiment.
+
+**the catch:** macOS-only and behind a waitlist right now. squarely experimental — the kind of Labs project that can change shape or get folded into something else without notice.
+
+---
+
+## 7. NotebookLM
 
 **replaces:** notion AI + perplexity + readwise
-**url:** [notebooklm.google.com](https://notebooklm.google.com)
+**url:** [notebooklm.google](https://notebooklm.google)
 
 upload sources (PDFs, websites, audio, YouTube). it summarizes, builds mind maps, generates quizzes, drafts slide decks, even turns your notes into a podcast you can listen to on a walk. genuinely changes how you research dense material.
 
@@ -49,12 +132,38 @@ upload sources (PDFs, websites, audio, YouTube). it summarizes, builds mind maps
 
 ---
 
-## 2. Google AI Studio
+## 8. Learn Your Way
+
+**replaces:** paid tutoring + generic online courses
+**url:** [learnyourway.withgoogle.com](https://learnyourway.withgoogle.com)
+
+turns any topic into a personalized, AI-built course. it takes educational content and regenerates it into multiple formats — immersive text with embedded questions, audio lessons, narrated slides, mind maps, and quizzes — adapted to how you learn.
+
+**free tier:** free to use, with plenty of ready-made sources to explore.
+
+**the catch:** uploading your *own* PDFs is behind a waitlist. it's a Google Labs experiment aimed at students, so expect the usual experimental-tool uncertainty around longevity.
+
+---
+
+## 9. Flow Music
+
+**replaces:** suno + udio ($10/mo)
+**url:** [flowmusic.app](https://flowmusic.app)
+
+chat with an AI producer to generate full, produced songs — vocals, melody, arrangement — from a plain text prompt. runs on Google's Lyria model inside the broader Flow creative suite, with a stem splitter and an AI music-video generator (Veo) attached.
+
+**free tier:** free on web and iOS. every generated track ships with full commercial rights for YouTube, podcasts, ads, and film — no extra fees.
+
+**the catch:** Google sign-in + age verification to start, and generation is capped daily like the rest of the Flow suite. the heavy Veo music-video features lean on the same paid Flow / Google AI Pro allowances as regular video generation.
+
+---
+
+## 10. Google AI Studio
 
 **replaces:** openai playground + paid API credits
 **url:** [aistudio.google.com](https://aistudio.google.com)
 
-web playground for gemini 3 pro and flash. comes with a free API key. generous rate limits. paste a 1M-token context window and watch it actually use it.
+web playground for gemini 3 pro and flash, and a fast "vibe coder" for prototyping MVPs and spinning up AI apps in seconds. comes with a free API key, generous rate limits, and a 1M-token context window that it actually uses.
 
 **free tier:** generous daily quotas across all gemini models including pro. free API key for personal use.
 
@@ -62,7 +171,20 @@ web playground for gemini 3 pro and flash. comes with a free API key. generous r
 
 ---
 
-## 3. Gemini CLI
+## 11. Jules
+
+**replaces:** devin ($20/mo) + cursor agent ($20/mo)
+**url:** [jules.google](https://jules.google)
+
+assign jules a github issue. it spins up a secure cloud VM, clones your repo, writes a plan, makes the changes, opens a PR. you review the diff and merge.
+
+**free tier:** 15 tasks/day, 3 concurrent tasks, runs on gemini flash.
+
+**the catch:** flash isn't as strong as the pro model for complex changes. and 15 tasks/day fills up fast if you're using it seriously. pro tier ($19.99/mo) gives you 5x the limits and gemini 3.1 pro.
+
+---
+
+## 12. Gemini CLI
 
 **replaces:** claude code ($20/mo by default)
 **repo:** [github.com/google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli)
@@ -76,95 +198,44 @@ google's official open-source terminal agent. one command (`npx @google/gemini-c
 
 ---
 
-## 4. Jules
+## 13. Code Wiki
 
-**replaces:** devin ($20/mo) + cursor agent ($20/mo)
-**url:** [jules.google](https://jules.google)
+**replaces:** mintlify + manual docs + devin's deepwiki
+**url:** [codewiki.google](https://codewiki.google)
 
-assign jules a github issue. it spins up a secure cloud VM, clones your repo, writes a plan, makes the changes, opens a PR. you review the diff and merge.
+a self-updating wiki that explains an entire codebase using Gemini. point it at any public GitHub repo and it generates structured docs, architecture/class/sequence diagrams, and a Gemini-powered chat — every section hyperlinked straight to the relevant code, and it re-generates after each commit.
 
-**free tier:** 15 tasks/day, 3 concurrent tasks, runs on gemini flash.
+**free tier:** free for any public GitHub repository.
 
-**the catch:** flash isn't as strong as the pro model for complex changes. and 15 tasks/day fills up fast if you're using it seriously. pro tier ($19.99/mo) gives you 5x the limits and gemini 3.1 pro.
+**the catch:** public repos only. private-repo support is a separate, waitlisted Gemini CLI extension you run on your own infra. launched as a public preview in late 2025, so features are still moving.
 
----
-
-## 5. Stitch
-
-**replaces:** galileo AI + early-stage figma work
-**url:** [stitch.withgoogle.com](https://stitch.withgoogle.com)
-
-google's free figma killer. describe an interface, get production-ready HTML/CSS/Tailwind + figma export. march 2026 update added voice canvas, infinite canvas, and MCP integration with cursor.
-
-**free tier:** 350 standard + 200 experimental generations per month.
-
-**the catch:** still in Google Labs beta. unavailable in some countries. output quality is solid but generic — it generates from its own models, not your team's design system.
+> note: some lists point "Codewiki" at `github.com/deepwiki` — that's Cognition's DeepWiki, a different product. Google's tool lives at [codewiki.google](https://codewiki.google).
 
 ---
 
-## 6. Gemma 4
+## 14. Firebase Studio
 
-**replaces:** paying for hosted LLM inference (groq, openrouter, anthropic API)
-**repo:** [ai.google.dev/gemma](https://ai.google.dev/gemma)
-**license:** Apache 2.0
+**replaces:** replit + backend dashboards
+**url:** [firebase.studio](https://firebase.studio)
 
-google's flagship open model. 2B, 4B, 26B-MoE (3.8B active), and 31B variants. 256K context. instruction-tuned and base versions. 150M+ downloads.
+a visual, AI-boosted cockpit for building apps and managing backend data and cloud logic, with Gemini wired in across the workspace.
 
-**free tier:** entire model weights are free. apache 2.0 — use commercially. runs on ollama with one command.
+**free tier:** the no-cost plan allowed 3 workspaces per user (up to 10 via the Google Developer Program, 30 via Premium).
 
-**the catch:** you're running it on your hardware. the 4B fits on a laptop, the 26B-MoE needs ~16GB VRAM quantized, the 31B needs a real GPU. tops out below frontier models — great for local work, not for replacing claude opus.
-
----
-
-## 7. Illuminate
-
-**replaces:** snipd + manual research reading
-**url:** [illuminate.google.com](https://illuminate.google.com)
-
-paste an arxiv preprint link. illuminate turns dense research papers into a 6-8 min conversation between two AI hosts breaking down the key points. perfect for commute reading you can't do at a desk.
-
-**free tier:** entire tool is free.
-
-**the catch:** still on a waitlist for some regions. arxiv-only — won't work on regular PDFs or non-arxiv academic sources. classified as experimental, could be shut down or rolled into NotebookLM.
+**the catch:** ⚠️ **this one's on the way out.** Google disabled new workspace creation and new-user signup on **June 22, 2026**, and Firebase Studio is scheduled to sunset on **March 22, 2027**. if you're not already in, you can't get in — kept on the list for completeness, but treat it as deprecated, not something to start a new project on.
 
 ---
 
-## 8. Learn About (LearnLM)
+## 15. Gemini Code Assist
 
-**replaces:** paid tutoring + udemy on niche topics
-**url:** [learning.google/experiments/learn-about](https://learning.google/experiments/learn-about/)
+**replaces:** github copilot ($10/mo)
+**url:** [codeassist.google](https://codeassist.google)
 
-adaptive AI tutor. drop in any topic you're stuck on. highlight a word, click "go deeper," and the interface adapts in real time to your comprehension level. visual explanations, follow-up questions, quizzes, the works.
+a professional AI pair programmer that drops into VS Code, JetBrains, Cursor, and GitHub. code completion, chat, and AI-powered code reviews on your PRs — with a genuinely free individual tier, not just a trial.
 
-**free tier:** entire tool is free.
+**free tier:** free for individuals since march 2026 — 180,000 code completions/month, 240 chat requests/day, plus AI code reviews in GitHub.
 
-**the catch:** classified as Google Labs experiment — same uncertainty as Illuminate. LearnLM itself is now baked into Gemini, so the standalone "Learn About" experience may eventually fold into Gemini directly.
-
----
-
-## 9. Google Labs FX
-
-**replaces:** midjourney ($10/mo) + suno ($10/mo) — partially
-**url:** [labs.google/fx](https://labs.google/fx)
-
-google labs creative suite. ImageFX for text-to-image (imagen 4). MusicFX for text-to-music (musicLM). Flow for text-to-video (veo 3.1). 18+ only.
-
-**free tier:** limited daily generations for image and music.
-
-**the catch:** this is the messiest one. VideoFX has been absorbed into Flow, and Whisk + ImageFX are migrating into Flow by April 30, 2026. the heavy veo 3.1 video generation features are paid (Google AI Pro $19.99/mo). image and music stay free for casual use. don't expect a free runway replacement.
-
----
-
-## 10. Google Colab
-
-**replaces:** paid cloud GPU rentals (runpod, vast.ai)
-**url:** [colab.research.google.com](https://colab.research.google.com)
-
-free T4 GPU + 12GB RAM in a browser tab. enough to fine-tune small models, run stable diffusion, prototype agents. the launching pad for half the ML projects on github.
-
-**free tier:** free T4 GPU access with session-based usage limits.
-
-**the catch:** sessions disconnect after a few hours of inactivity. T4 is a 2018 GPU — fine for prototyping, slow for serious training. for bigger workloads you need Colab Pro ($9.99/mo) or Pro+ ($49.99/mo) which give A100/V100 access.
+**the catch:** the free tier is the individual plan — no team admin, policy, or enterprise controls (those are the paid Standard / Enterprise tiers). check the free-tier data-usage terms before pointing it at proprietary code.
 
 ---
 
@@ -172,9 +243,9 @@ free T4 GPU + 12GB RAM in a browser tab. enough to fine-tune small models, run s
 
 **on "free."** every tool above has limits. "free" means "you can get real value without paying," not "unlimited." the writeups state the actual caps.
 
-**on availability.** some Labs tools (Illuminate, Stitch, Learn About) have regional waitlists or country restrictions. if a link doesn't work for you, that's why.
+**on availability.** several Labs tools (Stitch, Opal, Mixboard, Disco, Learn Your Way) have regional waitlists or country restrictions. if a link doesn't work for you, that's why.
 
-**on stability.** Google Labs experiments can get shuttered, migrated, or paywalled with little notice. this list is accurate as of mid-2026 — check each tool's current status before building a workflow around it.
+**on stability.** Google Labs experiments can get shuttered, migrated, or paywalled with little notice — Firebase Studio is the cautionary tale here. this list is accurate as of mid-2026 — check each tool's current status before building a workflow around it.
 
 **on the replacements.** these don't always match the polish of their paid counterparts. NotebookLM's free tier won't replace a paid Notion AI workspace for a team. Jules' free tier won't replace Devin for a production codebase. these are starting points, not endpoints.
 
